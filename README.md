@@ -20,15 +20,11 @@ pip install -r requirements.txt
 4. Open the `wallpaper.py` file in your favourite Python editor or IDE
 5. Edit the code at the top of the script to include the folder location of the images you want to use:
 
-````
-DIR_PATH = '/path/to/folder/with/images'
-````
+`DIR_PATH = '/path/to/folder/with/images'`
 
 6. You can customize the time interval between each wallpaper change by editing the following line of code:
 
-````
-INTERVAL = 3600 # specify the interval in seconds
-````
+`INTERVAL = 3600 # specify the interval in seconds`
 
 In the above example, the wallpaper will change every hour (3600 seconds). You can change this to your desired interval.
 
@@ -46,4 +42,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-- [Your Name](https://github.com/lucky5isuru)
+- [shyzu](https://github.com/lucky5isuru)
