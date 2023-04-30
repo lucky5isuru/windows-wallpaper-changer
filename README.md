@@ -1,6 +1,6 @@
 # Wallpaper Changer
 
-This Python script changes your Windows desktop wallpaper at a specified interval using a random image from a specified folder.
+The Random Desktop Wallpaper Changer is a Python script that randomly selects and sets a new desktop wallpaper from a specified folder of images. The script supports common image file formats, such as .jpg, .jpeg, and .png. The order of the images is randomized each time the script is run, ensuring that the desktop background is always a fresh and exciting surprise. The time interval between wallpaper changes can be easily customized to suit personal preferences. This script is ideal for users who want to add some variety and excitement to their desktop viewing experience.
 
 ## Prerequisites
 
