@@ -13,22 +13,30 @@ This is a simple Python script to change the Windows desktop wallpaper using giv
 2. Ensure that Python 3 is installed on your machine.
 3. Install the required packages by running the following command in your terminal: 
 
+````
 pip install -r requirements.txt
+````
 
 4. Open the `wallpaper.py` file in your favourite Python editor or IDE
 5. Edit the code at the top of the script to include the folder location of the images you want to use:
 
+````
 DIR_PATH = '/path/to/folder/with/images'
+````
 
 6. You can customize the time interval between each wallpaper change by editing the following line of code:
 
+````
 INTERVAL = 3600 # specify the interval in seconds
+````
 
 In the above example, the wallpaper will change every hour (3600 seconds). You can change this to your desired interval.
 
 7. Save the file and run the script using the following command:
 
+````
 python wallpaper.py
+````
 
 This will run the script and start changing your Windows desktop wallpaper using images from the specified folder.
 
