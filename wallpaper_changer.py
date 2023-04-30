@@ -1,3 +1,7 @@
+# @shyzu
+# https://github.com/lucky5isuru
+
+
 import os
 import ctypes
 import time
