@@ -9,15 +9,17 @@ config = configparser.ConfigParser()
 
 # Check if the config file exists
 if not os.path.exists('config.ini'):
-    # Ask for the image folder path and save it in config file
+    # Ask for the image folder path and time interval and save them in config file
     image_folder = input("Enter the path to the folder containing the images: ")
-    config['DEFAULT'] = {'image_folder': image_folder}
+    interval = int(input("Enter the time interval (in seconds) between wallpaper changes: "))
+    config['DEFAULT'] = {'image_folder': image_folder, 'interval': str(interval)}
     with open('config.ini', 'w') as config_file:
         config.write(config_file)
 else:
-    # Read the image folder path from the config file
+    # Read the image folder path and time interval from the config file
     config.read('config.ini')
     image_folder = config['DEFAULT']['image_folder']
+    interval = int(config['DEFAULT']['interval'])
 
 # Define the list of image file extensions to look for
 IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
@@ -37,9 +39,6 @@ images = find_images_in_folder(image_folder)
 # Randomize the order of the images
 random.shuffle(images)
 
-# Define the time interval between wallpaper changes (in seconds)
-INTERVAL = 60
-
 # Set the Windows desktop wallpaper
 def set_wallpaper(image_path):
     SPI_SETDESKWALLPAPER = 20
@@ -58,4 +57,4 @@ if __name__ == '__main__':
         # Set the wallpaper
         set_wallpaper(image_path)
         # Wait for the specified interval before changing again
-        time.sleep(INTERVAL)
+        time.sleep(interval)
