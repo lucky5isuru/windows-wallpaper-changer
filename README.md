@@ -28,4 +28,5 @@ The `config.ini` file contains the following configuration options:
 - `interval`: the time interval (in seconds) between wallpaper changes.
 
 ## License
-This code is licensed under the MIT License. See `LICENSE` for more information.
+This code is licensed under the [MIT License](LICENSE). See LICENSE for more information.
+
