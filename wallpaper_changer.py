@@ -1,3 +1,5 @@
+# https://github.com/lucky5isuru/windows-wallpaper-changer
+
 import os
 import ctypes
 import time
