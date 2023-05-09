@@ -29,4 +29,6 @@ The `config.ini` file contains the following configuration options:
 
 ## License
 This code is licensed under the [MIT License](LICENSE). See LICENSE for more information.
+[shyzu](https://github.com/lucky5isuru) 😻
+
 
