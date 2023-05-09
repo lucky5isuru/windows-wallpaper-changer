@@ -1,14 +1,23 @@
-# @shyzu
-# https://github.com/lucky5isuru
-
-
 import os
 import ctypes
 import time
 import random
+import configparser
 
-# Define the folder where the images are located
-IMAGE_FOLDER = r'/path/to/folder/with/images'
+# Initialize configparser object to read and write configuration file
+config = configparser.ConfigParser()
+
+# Check if the config file exists
+if not os.path.exists('config.ini'):
+    # Ask for the image folder path and save it in config file
+    image_folder = input("Enter the path to the folder containing the images: ")
+    config['DEFAULT'] = {'image_folder': image_folder}
+    with open('config.ini', 'w') as config_file:
+        config.write(config_file)
+else:
+    # Read the image folder path from the config file
+    config.read('config.ini')
+    image_folder = config['DEFAULT']['image_folder']
 
 # Define the list of image file extensions to look for
 IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
@@ -23,13 +32,13 @@ def find_images_in_folder(folder):
     return images
 
 # Define the list of images
-images = find_images_in_folder(IMAGE_FOLDER)
+images = find_images_in_folder(image_folder)
 
 # Randomize the order of the images
 random.shuffle(images)
 
 # Define the time interval between wallpaper changes (in seconds)
-INTERVAL = 3600
+INTERVAL = 60
 
 # Set the Windows desktop wallpaper
 def set_wallpaper(image_path):
